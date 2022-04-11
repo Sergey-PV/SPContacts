@@ -9,12 +9,45 @@ import UIKit
 import Contacts
 
 struct Contact {
+    let identifier: String
     var name: String
     var middleName: String
     var familyName: String
-    var emailAddresses: [String]
+    var emailAddresses: [CNLabeledValue<NSString>]
     var phoneNumbers: [CNLabeledValue<CNPhoneNumber>]
     var birtday: DateComponents?
-    var imageData: UIImage
-    var thumbnailImageData: UIImage
+    var imageData: UIImage?
+    var thumbnailImageData: UIImage?
+    
+    init(contact: CNContact) {
+        identifier = contact.identifier
+        name = contact.givenName
+        middleName = contact.middleName
+        familyName = contact.familyName
+        emailAddresses = contact.emailAddresses
+        phoneNumbers = contact.phoneNumbers
+        birtday = contact.birthday
+        if let data = contact.imageData {
+            imageData = UIImage(data: data)
+        }
+        if let data = contact.thumbnailImageData {
+            thumbnailImageData = UIImage(data: data)
+        }
+    }
+}
+
+extension Contact: GettableKeys {
+    func getKeys() -> [CNKeyDescriptor] {
+        let keysToFetch = [CNContactIdentifierKey,
+                           CNContactGivenNameKey,
+                           CNContactMiddleNameKey,
+                           CNContactFamilyNameKey,
+                           CNContactEmailAddressesKey,
+                           CNContactPhoneNumbersKey,
+                           CNContactBirthdayKey,
+                           CNContactImageDataKey,
+                           CNContactThumbnailImageDataKey]
+        
+        return keysToFetch as [CNKeyDescriptor]
+    }
 }

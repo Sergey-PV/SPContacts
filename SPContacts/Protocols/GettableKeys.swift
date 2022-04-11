@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Contacts
+
+protocol GettableKeys {
+    func getKeys() -> [CNKeyDescriptor]
+}
