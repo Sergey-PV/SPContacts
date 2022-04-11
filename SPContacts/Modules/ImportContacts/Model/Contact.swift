@@ -36,8 +36,17 @@ struct Contact {
     }
 }
 
-extension Contact: GettableKeys {
-    func getKeys() -> [CNKeyDescriptor] {
+extension Contact: FetchableContacts {
+    static func transformContacts(_ contacts: [CNContact]) -> [Contact] {
+        var thisConctacts: [Contact] = []
+        for contact in contacts {
+            let thisContact = Contact.init(contact: contact)
+            thisConctacts.append(thisContact)
+        }
+        return thisConctacts
+    }
+    
+    static func getKeysToFetch() -> [CNKeyDescriptor] {
         let keysToFetch = [CNContactIdentifierKey,
                            CNContactGivenNameKey,
                            CNContactMiddleNameKey,
@@ -47,7 +56,6 @@ extension Contact: GettableKeys {
                            CNContactBirthdayKey,
                            CNContactImageDataKey,
                            CNContactThumbnailImageDataKey]
-        
         return keysToFetch as [CNKeyDescriptor]
     }
 }

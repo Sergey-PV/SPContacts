@@ -8,6 +8,7 @@
 import Foundation
 import Contacts
 
-protocol GettableKeys {
-    func getKeys() -> [CNKeyDescriptor]
+protocol FetchableContacts {
+    static func getKeysToFetch() -> [CNKeyDescriptor]
+    static func transformContacts(_ contacts: [CNContact]) -> [Self]
 }
