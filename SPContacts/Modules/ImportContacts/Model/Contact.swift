@@ -9,33 +9,28 @@ import UIKit
 import Contacts
 
 struct Contact {
-    let identifier: String
+    // MARK: - Private Properties
     var name: String
     var middleName: String
     var familyName: String
     var emailAddresses: [CNLabeledValue<NSString>]
     var phoneNumbers: [CNLabeledValue<CNPhoneNumber>]
-    var birtday: DateComponents?
     var imageData: UIImage?
-    var thumbnailImageData: UIImage?
     
+    // MARK: - Initialize
     init(contact: CNContact) {
-        identifier = contact.identifier
         name = contact.givenName
         middleName = contact.middleName
         familyName = contact.familyName
         emailAddresses = contact.emailAddresses
         phoneNumbers = contact.phoneNumbers
-        birtday = contact.birthday
         if let data = contact.imageData {
             imageData = UIImage(data: data)
-        }
-        if let data = contact.thumbnailImageData {
-            thumbnailImageData = UIImage(data: data)
         }
     }
 }
 
+// MARK: - FetchableContacts
 extension Contact: FetchableContacts {
     static func transformContacts(_ contacts: [CNContact]) -> [Contact] {
         var thisConctacts: [Contact] = []

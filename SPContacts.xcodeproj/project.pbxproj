@@ -13,8 +13,13 @@
 		FF5422A42801B5A800E93AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5422A32801B5A800E93AF0 /* Assets.xcassets */; };
 		FF5422A72801B5A800E93AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5422A52801B5A800E93AF0 /* LaunchScreen.storyboard */; };
 		FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422B32801B8B300E93AF0 /* Contact.swift */; };
-		FF5422BC2804962700E93AF0 /* GettableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422BB2804962700E93AF0 /* GettableKeys.swift */; };
+		FF5422BC2804962700E93AF0 /* FetchableContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422BB2804962700E93AF0 /* FetchableContacts.swift */; };
 		FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422BE280498DB00E93AF0 /* ContactStore+Ex.swift */; };
+		FF5422C52807359800E93AF0 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C42807359800E93AF0 /* ImportViewController.swift */; };
+		FF5422C72807381200E93AF0 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C62807381200E93AF0 /* ImportView.swift */; };
+		FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C82807383F00E93AF0 /* ImportButton.swift */; };
+		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
+		FF5422D528073BD200E93AF0 /* ConstantsString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantsString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +31,14 @@
 		FF5422A62801B5A800E93AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF5422A82801B5A800E93AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF5422B32801B8B300E93AF0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		FF5422BB2804962700E93AF0 /* GettableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettableKeys.swift; sourceTree = "<group>"; };
+		FF5422BB2804962700E93AF0 /* FetchableContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchableContacts.swift; sourceTree = "<group>"; };
 		FF5422BE280498DB00E93AF0 /* ContactStore+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactStore+Ex.swift"; sourceTree = "<group>"; };
+		FF5422C42807359800E93AF0 /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		FF5422C62807381200E93AF0 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		FF5422C82807383F00E93AF0 /* ImportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportButton.swift; sourceTree = "<group>"; };
+		FF5422D028073B5900E93AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF5422D428073BD200E93AF0 /* ConstantsString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,8 @@
 		FF5422992801B5A600E93AF0 /* SPContacts */ = {
 			isa = PBXGroup;
 			children = (
+				FF5422D328073BB200E93AF0 /* Constants */,
+				FF5422CC28073B2700E93AF0 /* Localizable */,
 				FF5422BD2804985900E93AF0 /* Extensions */,
 				FF5422BA280495A700E93AF0 /* Protocols */,
 				FF5422AE2801B84200E93AF0 /* Modules */,
@@ -90,18 +103,12 @@
 			path = ListContacts;
 			sourceTree = "<group>";
 		};
-		FF5422B22801B88C00E93AF0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FF5422B32801B8B300E93AF0 /* Contact.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		FF5422B52801B9BD00E93AF0 /* ImportContacts */ = {
 			isa = PBXGroup;
 			children = (
-				FF5422B22801B88C00E93AF0 /* Model */,
+				FF5422C02804B18B00E93AF0 /* Model */,
+				FF5422C3280734C800E93AF0 /* Views */,
+				FF5422C2280734A300E93AF0 /* Controller */,
 			);
 			path = ImportContacts;
 			sourceTree = "<group>";
@@ -116,7 +123,7 @@
 		FF5422BA280495A700E93AF0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				FF5422BB2804962700E93AF0 /* GettableKeys.swift */,
+				FF5422BB2804962700E93AF0 /* FetchableContacts.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -127,6 +134,55 @@
 				FF5422BE280498DB00E93AF0 /* ContactStore+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF5422C02804B18B00E93AF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422B32801B8B300E93AF0 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF5422C2280734A300E93AF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422C42807359800E93AF0 /* ImportViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FF5422C3280734C800E93AF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422CA2807384F00E93AF0 /* Subviews */,
+				FF5422C62807381200E93AF0 /* ImportView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF5422CA2807384F00E93AF0 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422C82807383F00E93AF0 /* ImportButton.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		FF5422CC28073B2700E93AF0 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422D128073B5900E93AF0 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		FF5422D328073BB200E93AF0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FF5422D428073BD200E93AF0 /* ConstantsString.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +227,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FF54228E2801B5A500E93AF0;
 			productRefGroup = FF5422982801B5A600E93AF0 /* Products */;
@@ -188,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5422A72801B5A800E93AF0 /* LaunchScreen.storyboard in Resources */,
+				FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */,
 				FF5422A42801B5A800E93AF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,12 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5422D528073BD200E93AF0 /* ConstantsString.swift in Sources */,
 				FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */,
-				FF5422BC2804962700E93AF0 /* GettableKeys.swift in Sources */,
+				FF5422C72807381200E93AF0 /* ImportView.swift in Sources */,
+				FF5422BC2804962700E93AF0 /* FetchableContacts.swift in Sources */,
 				FF54229F2801B5A600E93AF0 /* ViewController.swift in Sources */,
 				FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */,
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,
+				FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */,
 				FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */,
+				FF5422C52807359800E93AF0 /* ImportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +281,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		FF5422D128073B5900E93AF0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5422D028073B5900E93AF0 /* en */,
+				FF5422D228073B5C00E93AF0 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -226,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -286,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
