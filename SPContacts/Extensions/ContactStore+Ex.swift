@@ -11,10 +11,13 @@ import Contacts
 extension CNContactStore {
     func fetchContact<T: FetchableContacts>(on contact: T.Type,
                                        result: @escaping (Result<[T], Error>) -> Void) {
-        let predicate = NSPredicate(value: true)
+        let contactStore = CNContactStore()
         do {
-            let contacts = try self.unifiedContacts(matching: predicate,
-                                                    keysToFetch: contact.getKeysToFetch())
+            var contacts: [CNContact] = []
+            let contactFetchRequest = CNContactFetchRequest(keysToFetch: T.getKeysToFetch())
+            try contactStore.enumerateContacts(with: contactFetchRequest, usingBlock: { contact, _ in
+                contacts.append(contact)
+            })
             result(.success(contact.transformContacts(contacts)))
         } catch {
             result(.failure(error))

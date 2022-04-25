@@ -8,5 +8,5 @@
 import Foundation
 
 struct ConstantsString {
-    static let downloadContacts = NSLocalizedString("ConstantsString", comment: "")
+    static let downloadContacts = NSLocalizedString("Download contacts", comment: "")
 }

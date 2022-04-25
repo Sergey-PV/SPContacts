@@ -48,9 +48,7 @@ extension Contact: FetchableContacts {
                            CNContactFamilyNameKey,
                            CNContactEmailAddressesKey,
                            CNContactPhoneNumbersKey,
-                           CNContactBirthdayKey,
-                           CNContactImageDataKey,
-                           CNContactThumbnailImageDataKey]
+                           CNContactImageDataKey]
         return keysToFetch as [CNKeyDescriptor]
     }
 }

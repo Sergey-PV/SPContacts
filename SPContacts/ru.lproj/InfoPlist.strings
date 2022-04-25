@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  SPContacts
+
+  Created by Sergey Parfentchik on 13.04.22.
+  
+*/
+"NSContactsUsageDescription" = "текст";
