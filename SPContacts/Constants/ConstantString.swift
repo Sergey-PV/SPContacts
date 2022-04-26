@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct ConstantsString {
+struct ConstantString {
     static let downloadContacts = NSLocalizedString("Download contacts", comment: "")
+    static let listCellId = "listCellId"
 }

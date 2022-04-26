@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FF05AD6628171F31001C9783 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6528171F31001C9783 /* ListViewController.swift */; };
 		FF05AD682817206F001C9783 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD672817206F001C9783 /* ListView.swift */; };
+		FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6A281728FC001C9783 /* ListTableViewCell.swift */; };
+		FF05AD6D28172CAD001C9783 /* ConstantSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6C28172CAD001C9783 /* ConstantSize.swift */; };
+		FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6E2818708C001C9783 /* ConstantColor.swift */; };
 		FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229A2801B5A600E93AF0 /* AppDelegate.swift */; };
 		FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */; };
 		FF54229F2801B5A600E93AF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229E2801B5A600E93AF0 /* ViewController.swift */; };
@@ -21,13 +24,16 @@
 		FF5422C72807381200E93AF0 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C62807381200E93AF0 /* ImportView.swift */; };
 		FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C82807383F00E93AF0 /* ImportButton.swift */; };
 		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
-		FF5422D528073BD200E93AF0 /* ConstantsString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantsString.swift */; };
+		FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantString.swift */; };
 		FFB3FD4F280751BF00B45D74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FD51280751BF00B45D74 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF05AD6528171F31001C9783 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FF05AD672817206F001C9783 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		FF05AD6A281728FC001C9783 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		FF05AD6C28172CAD001C9783 /* ConstantSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantSize.swift; sourceTree = "<group>"; };
+		FF05AD6E2818708C001C9783 /* ConstantColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantColor.swift; sourceTree = "<group>"; };
 		FF5422972801B5A600E93AF0 /* SPContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54229A2801B5A600E93AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +48,7 @@
 		FF5422C82807383F00E93AF0 /* ImportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportButton.swift; sourceTree = "<group>"; };
 		FF5422D028073B5900E93AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FF5422D428073BD200E93AF0 /* ConstantsString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsString.swift; sourceTree = "<group>"; };
+		FF5422D428073BD200E93AF0 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
 		FFB3FD50280751BF00B45D74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFB3FD52280751C200B45D74 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFFF7DB028074EAC00ACA7A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 		FF05AD6328171EE9001C9783 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF05AD6928172893001C9783 /* Subview */,
 				FF05AD672817206F001C9783 /* ListView.swift */,
 			);
 			path = View;
@@ -101,6 +108,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF05AD6928172893001C9783 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FF05AD6A281728FC001C9783 /* ListTableViewCell.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		FF54228E2801B5A500E93AF0 = {
@@ -213,18 +228,18 @@
 		FF5422C3280734C800E93AF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FF5422CA2807384F00E93AF0 /* Subviews */,
+				FF5422CA2807384F00E93AF0 /* Subview */,
 				FF5422C62807381200E93AF0 /* ImportView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		FF5422CA2807384F00E93AF0 /* Subviews */ = {
+		FF5422CA2807384F00E93AF0 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
 				FF5422C82807383F00E93AF0 /* ImportButton.swift */,
 			);
-			path = Subviews;
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		FF5422CC28073B2700E93AF0 /* Localizable */ = {
@@ -238,7 +253,9 @@
 		FF5422D328073BB200E93AF0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FF5422D428073BD200E93AF0 /* ConstantsString.swift */,
+				FF5422D428073BD200E93AF0 /* ConstantString.swift */,
+				FF05AD6C28172CAD001C9783 /* ConstantSize.swift */,
+				FF05AD6E2818708C001C9783 /* ConstantColor.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -316,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5422D528073BD200E93AF0 /* ConstantsString.swift in Sources */,
+				FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */,
 				FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */,
 				FF5422C72807381200E93AF0 /* ImportView.swift in Sources */,
 				FF5422BC2804962700E93AF0 /* FetchableContacts.swift in Sources */,
@@ -326,7 +343,10 @@
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,
 				FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */,
 				FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */,
+				FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */,
+				FF05AD6D28172CAD001C9783 /* ConstantSize.swift in Sources */,
 				FF5422C52807359800E93AF0 /* ImportViewController.swift in Sources */,
+				FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */,
 				FF05AD682817206F001C9783 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

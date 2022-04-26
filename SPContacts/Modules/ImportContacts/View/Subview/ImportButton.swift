@@ -19,7 +19,7 @@ class ImportButton: UIButton {
     }
     
     private func setting() {
-        setTitle(ConstantsString.downloadContacts, for: .normal)
+        setTitle(ConstantString.downloadContacts, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

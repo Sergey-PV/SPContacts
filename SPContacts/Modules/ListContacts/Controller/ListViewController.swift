@@ -7,6 +7,10 @@
 
 import UIKit
 
+private extension ConstantString {
+    
+}
+
 class ListViewController: UIViewController {
     
     private lazy var listView: ListView = {
@@ -20,6 +24,7 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = ConstantColor.backgroud
         listView.listTableView.delegate = self
         listView.listTableView.dataSource = self
     }
@@ -30,13 +35,15 @@ extension ListViewController: UITableViewDelegate {
     
 }
 
-// MARK: -
+// MARK: - UITableViewDataSource
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: ConstantString.listCellId,
+                                                 for: indexPath)
+        return cell
     }
 }

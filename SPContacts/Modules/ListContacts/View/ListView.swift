@@ -8,7 +8,13 @@
 import UIKit
 
 class ListView: UIView {
-    private(set) lazy var listTableView = UITableView()
+    private(set) lazy var listTableView: UITableView = {
+        let listTableView = UITableView()
+        listTableView.register(ListTableViewCell.self,
+                               forCellReuseIdentifier: ConstantString.listCellId)
+        listTableView.translatesAutoresizingMaskIntoConstraints = false
+        return listTableView
+    }()
 
     init() {
         super.init(frame: .zero)
