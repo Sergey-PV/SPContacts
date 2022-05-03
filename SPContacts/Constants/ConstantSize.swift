@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ConatantSize {
-    static let smallImage: CGFloat = 20.0
-    static let bigImage: CGFloat = ConatantSize.smallImage * 3
+struct ConstantSize {
+    static let smallImage: CGFloat = 30.0
+    static let bigImage: CGFloat = ConstantSize.smallImage * 3
 }

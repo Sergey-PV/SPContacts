@@ -38,12 +38,14 @@ extension ListViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ConstantString.listCellId,
                                                  for: indexPath)
+        guard let cell = cell as? ListTableViewCell else { return cell }
+        cell.nameLable.text = "Some text"
         return cell
     }
 }
