@@ -25,6 +25,7 @@
 		FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C82807383F00E93AF0 /* ImportButton.swift */; };
 		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
 		FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantString.swift */; };
+		FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BD35A28396FA7007F846C /* CloseButton.swift */; };
 		FFB3FD4F280751BF00B45D74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FD51280751BF00B45D74 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		FF5422D028073B5900E93AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D428073BD200E93AF0 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
+		FF6BD35A28396FA7007F846C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		FFB3FD50280751BF00B45D74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFB3FD52280751C200B45D74 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFFF7DB028074EAC00ACA7A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5422C82807383F00E93AF0 /* ImportButton.swift */,
+				FF6BD35A28396FA7007F846C /* CloseButton.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				FF05AD6D28172CAD001C9783 /* ConstantSize.swift in Sources */,
 				FF5422C52807359800E93AF0 /* ImportViewController.swift in Sources */,
 				FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */,
+				FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */,
 				FF05AD682817206F001C9783 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

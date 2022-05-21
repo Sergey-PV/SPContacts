@@ -24,6 +24,9 @@ class ImportViewController: UIViewController {
         importView.importButton.addTarget(self,
                                           action: #selector(importButtonTouchUpInside),
                                           for: .touchUpInside)
+        importView.closeButton.addTarget(self,
+                                         action: #selector(closeButtonTouchUpInside),
+                                         for: .touchUpInside)
     }
     
     @objc private func importButtonTouchUpInside(button: UIButton) {
@@ -36,5 +39,9 @@ class ImportViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    @objc private func closeButtonTouchUpInside(button: UIButton) {
+        dismiss(animated: true)
     }
 }

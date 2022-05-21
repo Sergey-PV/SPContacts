@@ -30,9 +30,6 @@ struct Contact {
             imageData = UIImage(named:"PersonCircle")
         }
     }
-    
-    
-    
     static let importNotificationName = Notification.Name(ConstantString.importContactNotificationName)
 }
 
