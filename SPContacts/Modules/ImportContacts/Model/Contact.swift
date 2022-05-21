@@ -26,8 +26,14 @@ struct Contact {
         phoneNumbers = contact.phoneNumbers
         if let data = contact.imageData {
             imageData = UIImage(data: data)
+        } else {
+            imageData = UIImage(named:"PersonCircle")
         }
     }
+    
+    
+    
+    static let importNotificationName = Notification.Name(ConstantString.importContactNotificationName)
 }
 
 // MARK: - FetchableContacts

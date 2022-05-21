@@ -31,7 +31,7 @@ class ImportViewController: UIViewController {
         contactStore.fetchContact(on: Contact.self) { result in
             switch result {
             case .success(let contacts):
-                print(contacts)
+                NotificationCenter.default.post(name: Contact.importNotificationName, object: contacts)
             case .failure(let error):
                 print(error)
             }

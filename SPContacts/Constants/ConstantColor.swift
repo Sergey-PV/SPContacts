@@ -9,4 +9,5 @@ import UIKit
 
 struct ConstantColor {
     static let backgroud = UIColor.systemBackground
+    static let textButtonForNormal = UIColor.systemGray
 }

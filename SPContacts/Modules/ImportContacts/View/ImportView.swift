@@ -13,12 +13,17 @@ class ImportView: UIView {
 
     init() {
         super.init(frame: .zero)
+        setting()
         addSubviews()
         setConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setting() {
+        backgroundColor = ConstantColor.backgroud
     }
     
     private func addSubviews() {
