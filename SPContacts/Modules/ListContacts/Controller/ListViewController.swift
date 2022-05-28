@@ -7,8 +7,8 @@
 
 import UIKit
 
-private extension ConstantString {
-    
+private extension ConstantSize {
+    static let heightOfRow: CGFloat = 45
 }
 
 class ListViewController: UIViewController {
@@ -59,7 +59,6 @@ class ListViewController: UIViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == ConstantString.sortOrderIndetifier {
             sortingContact()
-            print("-------------------")
         }
     }
     
@@ -130,5 +129,9 @@ extension ListViewController: UITableViewDataSource {
         cell.nameLable.text = contacts[indexPath.row].name + " " + contacts[indexPath.row].familyName
         cell.photoImageView.image = contacts[indexPath.row].imageData
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        ConstantSize.heightOfRow
     }
 }

@@ -9,8 +9,6 @@ import UIKit
 
 private extension ConstantSize {
     static let photoLeadingOffset: CGFloat = 10.0
-    static let photoTopOffset: CGFloat = 10.0
-    static let photoBottomOffset: CGFloat = 10.0
     static let nameLeadingOffset: CGFloat = 10.0
 }
 
@@ -38,10 +36,8 @@ class ListTableViewCell: UITableViewCell {
     }
 
     private func setting() {
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubviews()
         setConstraints()
-        
     }
 
     private func addSubviews() {
@@ -53,18 +49,14 @@ class ListTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
                                                     constant: ConstantSize.photoLeadingOffset),
-            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor,
-                                                constant: ConstantSize.photoTopOffset),
-            photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
-                                                   constant: -ConstantSize.photoBottomOffset),
+            photoImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             photoImageView.heightAnchor.constraint(equalToConstant: ConstantSize.smallImage),
             photoImageView.widthAnchor.constraint(equalToConstant: ConstantSize.smallImage),
 
             nameLable.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor,
                                                constant: ConstantSize.nameLeadingOffset),
             nameLable.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            nameLable.topAnchor.constraint(equalTo: contentView.topAnchor),
-            nameLable.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            nameLable.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor)
         ])
     }
 }
