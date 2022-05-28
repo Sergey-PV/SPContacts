@@ -14,7 +14,6 @@
 		FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6E2818708C001C9783 /* ConstantColor.swift */; };
 		FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229A2801B5A600E93AF0 /* AppDelegate.swift */; };
 		FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */; };
-		FF54229F2801B5A600E93AF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229E2801B5A600E93AF0 /* ViewController.swift */; };
 		FF5422A42801B5A800E93AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5422A32801B5A800E93AF0 /* Assets.xcassets */; };
 		FF5422A72801B5A800E93AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5422A52801B5A800E93AF0 /* LaunchScreen.storyboard */; };
 		FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422B32801B8B300E93AF0 /* Contact.swift */; };
@@ -26,6 +25,8 @@
 		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
 		FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantString.swift */; };
 		FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BD35A28396FA7007F846C /* CloseButton.swift */; };
+		FF6BD35D283A711B007F846C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF6BD35C283A711B007F846C /* Settings.bundle */; };
+		FF93AB56283ACD7E0026ED17 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */; };
 		FFB3FD4F280751BF00B45D74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFB3FD51280751BF00B45D74 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,6 @@
 		FF5422972801B5A600E93AF0 /* SPContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54229A2801B5A600E93AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF54229E2801B5A600E93AF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF5422A32801B5A800E93AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5422A62801B5A800E93AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF5422B32801B8B300E93AF0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D428073BD200E93AF0 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
 		FF6BD35A28396FA7007F846C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		FF6BD35C283A711B007F846C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		FFB3FD50280751BF00B45D74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFB3FD52280751C200B45D74 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFFF7DB028074EAC00ACA7A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,14 +145,15 @@
 				FF5422CC28073B2700E93AF0 /* Localizable */,
 				FF5422BD2804985900E93AF0 /* Extensions */,
 				FF5422BA280495A700E93AF0 /* Protocols */,
+				FF93AB57283ACD8F0026ED17 /* Services */,
 				FF5422AE2801B84200E93AF0 /* Modules */,
 				FF54229A2801B5A600E93AF0 /* AppDelegate.swift */,
 				FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */,
-				FF54229E2801B5A600E93AF0 /* ViewController.swift */,
 				FF5422A32801B5A800E93AF0 /* Assets.xcassets */,
 				FF5422A52801B5A800E93AF0 /* LaunchScreen.storyboard */,
 				FFFF7DB028074EAC00ACA7A7 /* Info.plist */,
 				FFB3FD51280751BF00B45D74 /* InfoPlist.strings */,
+				FF6BD35C283A711B007F846C /* Settings.bundle */,
 			);
 			path = SPContacts;
 			sourceTree = "<group>";
@@ -263,6 +266,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		FF93AB57283ACD8F0026ED17 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 			files = (
 				FF5422A72801B5A800E93AF0 /* LaunchScreen.storyboard in Resources */,
 				FFB3FD4F280751BF00B45D74 /* InfoPlist.strings in Resources */,
+				FF6BD35D283A711B007F846C /* Settings.bundle in Resources */,
 				FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */,
 				FF5422A42801B5A800E93AF0 /* Assets.xcassets in Resources */,
 			);
@@ -336,11 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF93AB56283ACD7E0026ED17 /* SettingsBundleHelper.swift in Sources */,
 				FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */,
 				FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */,
 				FF5422C72807381200E93AF0 /* ImportView.swift in Sources */,
 				FF5422BC2804962700E93AF0 /* FetchableContacts.swift in Sources */,
-				FF54229F2801B5A600E93AF0 /* ViewController.swift in Sources */,
 				FF05AD6628171F31001C9783 /* ListViewController.swift in Sources */,
 				FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */,
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,

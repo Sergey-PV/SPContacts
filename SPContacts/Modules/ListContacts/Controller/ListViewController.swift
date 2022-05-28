@@ -20,9 +20,16 @@ class ListViewController: UIViewController {
     
     private lazy var contacts: [Contact] = [] {
         didSet {
+            if areContactsSorted {
+                areContactsSorted = false
+            } else {
+                sortingContact()
+            }
             listView.listTableView.reloadData()
         }
     }
+    
+    private lazy var areContactsSorted = false
     
     override func loadView() {
         view = ListView()
@@ -35,9 +42,25 @@ class ListViewController: UIViewController {
         listView.listTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UserDefaults.standard.addObserver(self,
+                                          forKeyPath: ConstantString.sortOrderIndetifier,
+                                          context: nil)
+        sortingContact()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         getContacts()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == ConstantString.sortOrderIndetifier {
+            sortingContact()
+            print("-------------------")
+        }
     }
     
     private func getContacts() {
@@ -65,6 +88,28 @@ class ListViewController: UIViewController {
                                                   object: nil)
     }
     
+    
+    private func sortingContact() {
+        guard contacts.count > 1 else { return }
+        areContactsSorted = true
+        let settingsBundleHelper = SettingsBundleHelper()
+        
+        contacts = contacts.sorted(by: { firstContact, secondContact in
+            switch settingsBundleHelper.sortOrder {
+            case .first:
+                guard firstContact.name < secondContact.name else { return false}
+                return true
+            case .last:
+                guard firstContact.familyName < secondContact.familyName else { return false}
+                return true
+            }
+        })
+    }
+    
+    deinit {
+        UserDefaults.standard.removeObserver(self,
+                                             forKeyPath: ConstantString.sortOrderIndetifier)
+    }
 }
 
 // MARK: - UITableViewDelegate

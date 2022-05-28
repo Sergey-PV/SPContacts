@@ -31,10 +31,12 @@ class ImportViewController: UIViewController {
     
     @objc private func importButtonTouchUpInside(button: UIButton) {
         let contactStore = CNContactStore()
-        contactStore.fetchContact(on: Contact.self) { result in
+        contactStore.fetchContact(on: Contact.self) {[weak self] result in
             switch result {
             case .success(let contacts):
                 NotificationCenter.default.post(name: Contact.importNotificationName, object: contacts)
+                guard let self = self else { return }
+                self.dismiss(animated: true)
             case .failure(let error):
                 print(error)
             }

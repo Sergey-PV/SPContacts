@@ -10,6 +10,7 @@ import Contacts
 
 struct Contact {
     // MARK: - Private Properties
+    var identifier: String
     var name: String
     var middleName: String
     var familyName: String
@@ -19,6 +20,7 @@ struct Contact {
     
     // MARK: - Initialize
     init(contact: CNContact) {
+        identifier = contact.identifier
         name = contact.givenName
         middleName = contact.middleName
         familyName = contact.familyName

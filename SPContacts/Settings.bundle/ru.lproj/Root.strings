@@ -1,0 +1,9 @@
+/* A single strings file, whose title is specified in your preferences schema. The strings files provide the localized content to display to the user for each of your preferences. */
+
+"Group" = "Группы";
+"Name" = "Имя";
+"none given" = "не выбрано";
+"Enabled" = "Включенный";
+"Sort Order" = "Сортировать";
+"First" = "Имя";
+"Last" = "Фамилия";

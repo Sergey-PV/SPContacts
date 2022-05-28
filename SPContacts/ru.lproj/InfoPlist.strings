@@ -5,4 +5,4 @@
   Created by Sergey Parfentchik on 13.04.22.
   
 */
-"NSContactsUsageDescription" = "текст";
+"NSContactsUsageDescription" = "SPContacts необходим доступ к Контактам для импорта";
