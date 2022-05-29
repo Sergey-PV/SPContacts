@@ -38,6 +38,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ConstantColor.backgroud
+        setNavigationViewController()
         listView.listTableView.delegate = self
         listView.listTableView.dataSource = self
     }
@@ -52,7 +53,6 @@ class ListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         getContacts()
     }
     
@@ -60,6 +60,11 @@ class ListViewController: UIViewController {
         if keyPath == ConstantString.sortOrderIndetifier {
             sortingContact()
         }
+    }
+    
+    private func setNavigationViewController() {
+        title = "Contacts"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func getContacts() {

@@ -12,7 +12,7 @@ class ImportViewController: UIViewController {
     
     private lazy var importView: ImportView = {
         guard let view = view else { return ImportView() }
-        return (view as! ImportView)
+        return view as! ImportView
     }()
     
     override func loadView() {

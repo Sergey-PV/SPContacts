@@ -8,7 +8,7 @@
 import UIKit
 import Contacts
 
-struct Contact {
+final class Contact {
     // MARK: - Private Properties
     var identifier: String
     var name: String
@@ -45,7 +45,7 @@ extension Contact: FetchableContacts {
         }
         return thisConctacts
     }
-    
+
     static func getKeysToFetch() -> [CNKeyDescriptor] {
         let keysToFetch = [CNContactIdentifierKey,
                            CNContactGivenNameKey,
