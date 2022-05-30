@@ -9,12 +9,34 @@ import UIKit
 
 class DetailsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    private lazy var detailsTableView: UITableView = {
+        let detailsTableView = UITableView()
+        detailsTableView.translatesAutoresizingMaskIntoConstraints = false
+        detailsTableView.register(DetailsTableViewCell.self,
+                                  forCellReuseIdentifier: ConstantString.detailsCellId)
+        return detailsTableView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        addSubviews()
+        setConstraints()
     }
-    */
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
+    private func addSubviews() {
+        addSubview(detailsTableView)
+    }
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: detailsTableView.topAnchor),
+            bottomAnchor.constraint(equalTo: detailsTableView.bottomAnchor),
+            leadingAnchor.constraint(equalTo: detailsTableView.leadingAnchor),
+            trailingAnchor.constraint(equalTo: detailsTableView.trailingAnchor)
+        ])
+    }
 }

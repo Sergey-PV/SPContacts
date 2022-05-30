@@ -30,7 +30,7 @@ class ListViewController: UIViewController {
     }
     
     private lazy var areContactsSorted = false
-    
+
     override func loadView() {
         view = ListView()
     }
@@ -50,29 +50,29 @@ class ListViewController: UIViewController {
                                           context: nil)
         sortingContact()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getContacts()
     }
-    
+
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == ConstantString.sortOrderIndetifier {
             sortingContact()
         }
     }
-    
+
     private func setNavigationViewController() {
-        title = "Contacts"
+        title = ConstantString.contactsLocalized
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
     private func getContacts() {
         if contacts.count == 0 {
             importContacts()
         }
     }
-    
+
     private func importContacts() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateListTableView(notification:)),
@@ -82,7 +82,7 @@ class ListViewController: UIViewController {
         importViewController.modalPresentationStyle = .popover
         self.present(importViewController, animated: true)
     }
-    
+
     @objc private func updateListTableView(notification: Notification) {
         if let object = notification.object as? [Contact] {
             contacts = object
@@ -91,8 +91,7 @@ class ListViewController: UIViewController {
                                                   name: Contact.importNotificationName,
                                                   object: nil)
     }
-    
-    
+
     private func sortingContact() {
         guard contacts.count > 1 else { return }
         areContactsSorted = true

@@ -24,8 +24,9 @@
 		FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C82807383F00E93AF0 /* ImportButton.swift */; };
 		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
 		FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantString.swift */; };
-		FF55E04C284297B800759CAA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04B284297B800759CAA /* DetailsViewController.swift */; };
+		FF55E04C284297B800759CAA /* DetailsContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */; };
 		FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04D28429A0000759CAA /* DetailsView.swift */; };
+		FF55E0512843E8E500759CAA /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */; };
 		FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BD35A28396FA7007F846C /* CloseButton.swift */; };
 		FF6BD35D283A711B007F846C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF6BD35C283A711B007F846C /* Settings.bundle */; };
 		FF93AB56283ACD7E0026ED17 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */; };
@@ -52,8 +53,9 @@
 		FF5422D028073B5900E93AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D428073BD200E93AF0 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
-		FF55E04B284297B800759CAA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContactsViewController.swift; sourceTree = "<group>"; };
 		FF55E04D28429A0000759CAA /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		FF6BD35A28396FA7007F846C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		FF6BD35C283A711B007F846C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		FF05AD6028171E7E001C9783 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF55E04F2843E88C00759CAA /* Subview */,
 				FF55E04D28429A0000759CAA /* DetailsView.swift */,
 			);
 			path = View;
@@ -91,7 +94,7 @@
 		FF05AD6128171EAD001C9783 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FF55E04B284297B800759CAA /* DetailsViewController.swift */,
+				FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		FF55E04F2843E88C00759CAA /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		FF93AB57283ACD8F0026ED17 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +374,7 @@
 				FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */,
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,
 				FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */,
-				FF55E04C284297B800759CAA /* DetailsViewController.swift in Sources */,
+				FF55E04C284297B800759CAA /* DetailsContactsViewController.swift in Sources */,
 				FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */,
 				FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */,
 				FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */,
@@ -372,6 +383,7 @@
 				FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */,
 				FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */,
 				FF05AD682817206F001C9783 /* ListView.swift in Sources */,
+				FF55E0512843E8E500759CAA /* DetailsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

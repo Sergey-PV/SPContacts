@@ -19,7 +19,7 @@ class ImportButton: UIButton {
     }
     
     private func setting() {
-        setTitle(ConstantString.downloadContacts, for: .normal)
+        setTitle(ConstantString.downloadContactsLocalized, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
         setTitleColor(ConstantColor.textButtonForNormal, for: .normal)
     }

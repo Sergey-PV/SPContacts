@@ -8,8 +8,10 @@
 import Foundation
 
 struct ConstantString {
-    static let downloadContacts = NSLocalizedString("Download contacts", comment: "")
+    static let downloadContactsLocalized = NSLocalizedString("Download contacts", comment: "")
+    static let contactsLocalized = NSLocalizedString("Contacts", comment: "")
     static let listCellId = "listCellId"
+    static let detailsCellId = "detailsCellId"
     static let importContactNotificationName = "importContact"
     
     static let sortOrderIndetifier = "SortOrder"
