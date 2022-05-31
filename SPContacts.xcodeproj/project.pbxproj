@@ -24,9 +24,10 @@
 		FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422C82807383F00E93AF0 /* ImportButton.swift */; };
 		FF5422CF28073B5900E93AF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5422D128073B5900E93AF0 /* Localizable.strings */; };
 		FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5422D428073BD200E93AF0 /* ConstantString.swift */; };
-		FF55E04C284297B800759CAA /* DetailsContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */; };
+		FF55E04C284297B800759CAA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04B284297B800759CAA /* DetailsViewController.swift */; };
 		FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04D28429A0000759CAA /* DetailsView.swift */; };
 		FF55E0512843E8E500759CAA /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */; };
+		FF55E05328468ADD00759CAA /* UITableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E05228468ADD00759CAA /* UITableViewCell+Ex.swift */; };
 		FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BD35A28396FA7007F846C /* CloseButton.swift */; };
 		FF6BD35D283A711B007F846C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF6BD35C283A711B007F846C /* Settings.bundle */; };
 		FF93AB56283ACD7E0026ED17 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */; };
@@ -53,9 +54,10 @@
 		FF5422D028073B5900E93AF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D228073B5C00E93AF0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF5422D428073BD200E93AF0 /* ConstantString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
-		FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContactsViewController.swift; sourceTree = "<group>"; };
+		FF55E04B284297B800759CAA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FF55E04D28429A0000759CAA /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		FF55E05228468ADD00759CAA /* UITableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ex.swift"; sourceTree = "<group>"; };
 		FF6BD35A28396FA7007F846C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		FF6BD35C283A711B007F846C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 		FF05AD6128171EAD001C9783 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FF55E04B284297B800759CAA /* DetailsContactsViewController.swift */,
+				FF55E04B284297B800759CAA /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5422BE280498DB00E93AF0 /* ContactStore+Ex.swift */,
+				FF55E05228468ADD00759CAA /* UITableViewCell+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,12 +372,13 @@
 				FF5422D528073BD200E93AF0 /* ConstantString.swift in Sources */,
 				FF5422B42801B8B300E93AF0 /* Contact.swift in Sources */,
 				FF5422C72807381200E93AF0 /* ImportView.swift in Sources */,
+				FF55E05328468ADD00759CAA /* UITableViewCell+Ex.swift in Sources */,
 				FF5422BC2804962700E93AF0 /* FetchableContacts.swift in Sources */,
 				FF05AD6628171F31001C9783 /* ListViewController.swift in Sources */,
 				FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */,
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,
 				FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */,
-				FF55E04C284297B800759CAA /* DetailsContactsViewController.swift in Sources */,
+				FF55E04C284297B800759CAA /* DetailsViewController.swift in Sources */,
 				FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */,
 				FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */,
 				FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */,

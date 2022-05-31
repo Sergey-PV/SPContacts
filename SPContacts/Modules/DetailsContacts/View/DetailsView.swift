@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsView: UIView {
 
-    private lazy var detailsTableView: UITableView = {
+    private(set) lazy var detailsTableView: UITableView = {
         let detailsTableView = UITableView()
         detailsTableView.translatesAutoresizingMaskIntoConstraints = false
         detailsTableView.register(DetailsTableViewCell.self,

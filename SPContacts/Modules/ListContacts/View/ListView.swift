@@ -13,7 +13,7 @@ class ListView: UIView {
         listTableView.register(ListTableViewCell.self,
                                forCellReuseIdentifier: ConstantString.listCellId)
         listTableView.translatesAutoresizingMaskIntoConstraints = false
-        listTableView.allowsSelection = false
+        //listTableView.allowsSelection = false
         return listTableView
     }()
 

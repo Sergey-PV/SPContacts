@@ -117,7 +117,11 @@ class ListViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 extension ListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsViewController = DetailsViewController()
+        detailsViewController.contact = contacts[indexPath.row]
+        show(detailsViewController, sender: nil)
+    }
 }
 
 // MARK: - UITableViewDataSource

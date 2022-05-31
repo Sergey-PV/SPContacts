@@ -8,8 +8,8 @@
 import UIKit
 
 private extension ConstantSize {
-    static let textLeadingOffset: CGFloat = 10
-    static let textTralingOffset: CGFloat = 10
+    static let textLeadingOffset: CGFloat = 20
+    static let textTralingOffset: CGFloat = 20
 }
 
 class DetailsTableViewCell: UITableViewCell {
@@ -49,13 +49,14 @@ class DetailsTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: titleLable.topAnchor),
             leadingAnchor.constraint(equalTo: titleLable.leadingAnchor,
-                                     constant: ConstantSize.textLeadingOffset),
+                                     constant: -ConstantSize.textLeadingOffset),
             trailingAnchor.constraint(equalTo: titleLable.trailingAnchor,
                                       constant: ConstantSize.textTralingOffset),
             
             infoTextField.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
             infoTextField.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
             infoTextField.trailingAnchor.constraint(equalTo: titleLable.trailingAnchor)
+            
         ])
     }
 }
