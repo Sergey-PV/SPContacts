@@ -23,9 +23,19 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailsView.detailsTableView.backgroundColor = .blue
         detailsView.detailsTableView.delegate = self
         detailsView.detailsTableView.dataSource = self
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
     }
     
 }
