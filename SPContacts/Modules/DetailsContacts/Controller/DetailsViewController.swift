@@ -17,6 +17,8 @@ class DetailsViewController: UIViewController {
         return view as! DetailsView
     }()
     
+    private lazy var photoAndNameView = PhotoAndNameView()
+    
     override func loadView() {
         view = DetailsView()
     }
@@ -26,19 +28,16 @@ class DetailsViewController: UIViewController {
         detailsView.detailsTableView.delegate = self
         detailsView.detailsTableView.dataSource = self
         navigationItem.largeTitleDisplayMode = .never
+        setHeaderTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-    }
-    
-}
+    private func setHeaderTableView() {
+        photoAndNameView.nameLable.text = (contact?.name ?? "") + " " + (contact?.familyName ?? "")
+        photoAndNameView.photoImageView.image = contact?.imageData
+        detailsView.detailsTableView.tableHeaderView = photoAndNameView
+    }}
+
+
 
 extension DetailsViewController: UITableViewDelegate {
     

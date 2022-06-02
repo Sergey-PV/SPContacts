@@ -28,6 +28,7 @@
 		FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E04D28429A0000759CAA /* DetailsView.swift */; };
 		FF55E0512843E8E500759CAA /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */; };
 		FF55E05328468ADD00759CAA /* UITableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E05228468ADD00759CAA /* UITableViewCell+Ex.swift */; };
+		FF55E0592849382B00759CAA /* PhotoAndNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E0582849382B00759CAA /* PhotoAndNameView.swift */; };
 		FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BD35A28396FA7007F846C /* CloseButton.swift */; };
 		FF6BD35D283A711B007F846C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FF6BD35C283A711B007F846C /* Settings.bundle */; };
 		FF93AB56283ACD7E0026ED17 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */; };
@@ -58,6 +59,7 @@
 		FF55E04D28429A0000759CAA /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		FF55E05228468ADD00759CAA /* UITableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ex.swift"; sourceTree = "<group>"; };
+		FF55E0582849382B00759CAA /* PhotoAndNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAndNameView.swift; sourceTree = "<group>"; };
 		FF6BD35A28396FA7007F846C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		FF6BD35C283A711B007F846C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FF93AB55283ACD7E0026ED17 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				FF55E0502843E8E500759CAA /* DetailsTableViewCell.swift */,
+				FF55E0582849382B00759CAA /* PhotoAndNameView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */,
 				FF5422BF280498DC00E93AF0 /* ContactStore+Ex.swift in Sources */,
 				FF5422C92807383F00E93AF0 /* ImportButton.swift in Sources */,
+				FF55E0592849382B00759CAA /* PhotoAndNameView.swift in Sources */,
 				FF55E04C284297B800759CAA /* DetailsViewController.swift in Sources */,
 				FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */,
 				FF55E04E28429A0000759CAA /* DetailsView.swift in Sources */,
