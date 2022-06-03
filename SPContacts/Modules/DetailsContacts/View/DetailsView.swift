@@ -10,10 +10,11 @@ import UIKit
 class DetailsView: UIView {
 
     private(set) lazy var detailsTableView: UITableView = {
-        let detailsTableView = UITableView()
+        let detailsTableView = UITableView(frame: .zero, style: .insetGrouped)
         detailsTableView.translatesAutoresizingMaskIntoConstraints = false
         detailsTableView.register(DetailsTableViewCell.self,
                                   forCellReuseIdentifier: ConstantString.detailsCellId)
+        detailsTableView.backgroundColor = .clear
         return detailsTableView
     }()
     
@@ -21,6 +22,7 @@ class DetailsView: UIView {
         super.init(frame: .zero)
         addSubviews()
         setConstraints()
+        backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {

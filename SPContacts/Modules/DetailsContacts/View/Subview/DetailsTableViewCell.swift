@@ -17,13 +17,15 @@ class DetailsTableViewCell: UITableViewCell {
     private(set) lazy var titleLable: UILabel = {
         let titleLable = UILabel()
         titleLable.translatesAutoresizingMaskIntoConstraints = false
+        titleLable.font = UIFont.systemFont(ofSize: 15)
         return titleLable
     }()
     
-    private(set) lazy var infoTextField: UITextField = {
-        let infoTextField = UITextField()
-        infoTextField.translatesAutoresizingMaskIntoConstraints = false
-        return infoTextField
+    private(set) lazy var infoLabel: UILabel = {
+        let infoLabel = UILabel()
+        infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        infoLabel.textColor = .systemBlue
+        return infoLabel
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -42,7 +44,7 @@ class DetailsTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         addSubview(titleLable)
-        addSubview(infoTextField)
+        addSubview(infoLabel)
     }
     
     private func setConstraints() {
@@ -53,9 +55,9 @@ class DetailsTableViewCell: UITableViewCell {
             trailingAnchor.constraint(equalTo: titleLable.trailingAnchor,
                                       constant: ConstantSize.textTralingOffset),
             
-            infoTextField.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
-            infoTextField.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
-            infoTextField.trailingAnchor.constraint(equalTo: titleLable.trailingAnchor)
+            infoLabel.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
+            infoLabel.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
+            infoLabel.trailingAnchor.constraint(equalTo: titleLable.trailingAnchor)
             
         ])
     }

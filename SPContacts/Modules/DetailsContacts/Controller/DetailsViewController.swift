@@ -68,10 +68,10 @@ extension DetailsViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell.titleLable.text = CNLabeledValue<NSString>.localizedString(forLabel: (contact?.phoneNumbers[indexPath.row].label)!)
-            cell.infoTextField.text = contact?.phoneNumbers[indexPath.row].value.stringValue
+            cell.infoLabel.text = contact?.phoneNumbers[indexPath.row].value.stringValue
         case 1:
             cell.titleLable.text = CNLabeledValue<NSString>.localizedString(forLabel: (contact?.emailAddresses[indexPath.row].label)!)
-            cell.infoTextField.text = contact?.emailAddresses[indexPath.row].value as? String
+            cell.infoLabel.text = contact?.emailAddresses[indexPath.row].value as? String
         default:
             return cell
         }

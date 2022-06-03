@@ -24,6 +24,9 @@ class PhotoAndNameView: UIView {
     private(set) lazy var nameLable: UILabel = {
         let nameLable = UILabel()
         nameLable.translatesAutoresizingMaskIntoConstraints = false
+        nameLable.textAlignment = .center
+        nameLable.minimumScaleFactor = 10
+        nameLable.font = UIFont.boldSystemFont(ofSize: 30)
         return nameLable
     }()
 
@@ -53,9 +56,12 @@ class PhotoAndNameView: UIView {
             photoImageView.heightAnchor.constraint(equalToConstant: ConstantSize.bigImage),
             photoImageView.widthAnchor.constraint(equalToConstant: ConstantSize.bigImage),
             
-            nameLable.topAnchor.constraint(equalTo: photoImageView.bottomAnchor),
-            nameLable.centerXAnchor.constraint(equalTo: centerXAnchor),
-            nameLable.heightAnchor.constraint(equalToConstant: ConstantSize.heightName)
+            nameLable.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 15),
+            nameLable.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            nameLable.heightAnchor.constraint(equalToConstant: ConstantSize.heightName),
+            nameLable.leadingAnchor.constraint(equalTo: leadingAnchor),
+            nameLable.trailingAnchor.constraint(equalTo: trailingAnchor)
+            
         ])
     }
     
