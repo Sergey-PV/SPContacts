@@ -7,12 +7,14 @@
 
 import UIKit
 
+// MARK: - Constants
 private extension ConstantSize {
     static let heightOfRow: CGFloat = 45
 }
 
 class ListViewController: UIViewController {
     
+    // MARK: - UIElements
     private lazy var listView: ListView = {
         guard let view = view else { return ListView() }
         return (view as! ListView)
@@ -29,8 +31,10 @@ class ListViewController: UIViewController {
         }
     }
     
+    // MARK: - Private properties
     private lazy var areContactsSorted = false
 
+    // MARK: - Lifecycle
     override func loadView() {
         view = ListView()
     }
@@ -62,6 +66,7 @@ class ListViewController: UIViewController {
         }
     }
 
+    // MARK: - Private methods
     private func setNavigationViewController() {
         title = ConstantString.contactsLocalized
         navigationController?.navigationBar.prefersLargeTitles = true

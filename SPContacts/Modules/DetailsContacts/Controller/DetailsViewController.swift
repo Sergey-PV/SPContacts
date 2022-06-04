@@ -8,10 +8,13 @@
 import UIKit
 import Contacts
 
+// MARK: - DetailsViewController
 class DetailsViewController: UIViewController {
     
+    // MARK: - Public properties
     var contact: Contact?
     
+    // MARK: - UIElements
     private lazy var detailsView: DetailsView = {
         guard let view = view else { return DetailsView() }
         return view as! DetailsView
@@ -19,6 +22,7 @@ class DetailsViewController: UIViewController {
     
     private lazy var photoAndNameView = PhotoAndNameView()
     
+    // MARK: - Lifecycle
     override func loadView() {
         view = DetailsView()
     }
@@ -32,17 +36,18 @@ class DetailsViewController: UIViewController {
     }
     
     private func setHeaderTableView() {
-        photoAndNameView.nameLable.text = (contact?.name ?? "") + " " + (contact?.familyName ?? "")
+        photoAndNameView.nameLabel.text = (contact?.name ?? "") + " " + (contact?.familyName ?? "")
         photoAndNameView.photoImageView.image = contact?.imageData
         detailsView.detailsTableView.tableHeaderView = photoAndNameView
     }}
 
 
-
+// MARK: - UITableViewDelegate
 extension DetailsViewController: UITableViewDelegate {
     
 }
 
+// MARK: - UITableViewDataSource
 extension DetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -68,10 +73,10 @@ extension DetailsViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell.titleLable.text = CNLabeledValue<NSString>.localizedString(forLabel: (contact?.phoneNumbers[indexPath.row].label)!)
-            cell.infoLabel.text = contact?.phoneNumbers[indexPath.row].value.stringValue
+            cell.valueLabel.text = contact?.phoneNumbers[indexPath.row].value.stringValue
         case 1:
             cell.titleLable.text = CNLabeledValue<NSString>.localizedString(forLabel: (contact?.emailAddresses[indexPath.row].label)!)
-            cell.infoLabel.text = contact?.emailAddresses[indexPath.row].value as? String
+            cell.valueLabel.text = contact?.emailAddresses[indexPath.row].value as? String
         default:
             return cell
         }

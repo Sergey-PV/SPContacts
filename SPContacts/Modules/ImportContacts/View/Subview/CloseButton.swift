@@ -7,8 +7,10 @@
 
 import UIKit
 
+// MARK: - CloseButton
 class CloseButton: UIButton {
 
+    // MARK: - Initialize
     init() {
         super.init(frame: .zero)
         setting()
@@ -18,6 +20,7 @@ class CloseButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
     private func setting() {
         setTitle(ConstantString.downloadContactsLocalized, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false

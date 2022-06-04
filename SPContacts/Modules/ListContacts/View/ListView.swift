@@ -7,16 +7,17 @@
 
 import UIKit
 
+// MARK: - ListView
 class ListView: UIView {
     private(set) lazy var listTableView: UITableView = {
         let listTableView = UITableView()
         listTableView.register(ListTableViewCell.self,
                                forCellReuseIdentifier: ConstantString.listCellId)
         listTableView.translatesAutoresizingMaskIntoConstraints = false
-        //listTableView.allowsSelection = false
         return listTableView
     }()
 
+    // MARK: - Initialize
     init() {
         super.init(frame: .zero)
         addSubviews()
@@ -27,6 +28,7 @@ class ListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
     private func addSubviews() {
         addSubview(listTableView)
     }

@@ -7,13 +7,16 @@
 
 import UIKit
 
+// MARK: - Constants
 private extension ConstantSize {
-    static let photoLeadingOffset: CGFloat = 10.0
-    static let nameLeadingOffset: CGFloat = 10.0
+    static let offsetOffLeadingPhoto: CGFloat = 10.0
+    static let offsetOffLeadingName: CGFloat = 10.0
 }
 
+// MARK: - ListTableViewCell
 class ListTableViewCell: UITableViewCell {
 
+    // MARK: - UIElements
     lazy var photoImageView: UIImageView = {
         let photoImageView = UIImageView()
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +29,7 @@ class ListTableViewCell: UITableViewCell {
         return nameLable
     }()
 
+    // MARK: - Initialize
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         setting()
@@ -35,6 +39,7 @@ class ListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Private methods
     private func setting() {
         addSubviews()
         setConstraints()
@@ -48,13 +53,13 @@ class ListTableViewCell: UITableViewCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
-                                                    constant: ConstantSize.photoLeadingOffset),
+                                                    constant: ConstantSize.offsetOffLeadingPhoto),
             photoImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             photoImageView.heightAnchor.constraint(equalToConstant: ConstantSize.smallImage),
             photoImageView.widthAnchor.constraint(equalToConstant: ConstantSize.smallImage),
 
             nameLable.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor,
-                                               constant: ConstantSize.nameLeadingOffset),
+                                               constant: ConstantSize.offsetOffLeadingName),
             nameLable.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             nameLable.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor)
         ])

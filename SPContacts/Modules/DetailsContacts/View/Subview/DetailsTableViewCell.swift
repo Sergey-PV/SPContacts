@@ -7,27 +7,36 @@
 
 import UIKit
 
+// MARK: - Constants
 private extension ConstantSize {
-    static let textLeadingOffset: CGFloat = 20
-    static let textTralingOffset: CGFloat = 20
+    static let offsetOfLeadingTitleLable: CGFloat = 20
+    static let offsetOfTralingTitleLable: CGFloat = 20
+    static let fontOfTitleLable: CGFloat = 15
 }
 
+private extension ConstantColor {
+    static let textOfValueLabel = UIColor.systemBlue
+}
+
+// MARK: - DetailsTableViewCell
 class DetailsTableViewCell: UITableViewCell {
     
+    // MARK: - UIElements
     private(set) lazy var titleLable: UILabel = {
         let titleLable = UILabel()
         titleLable.translatesAutoresizingMaskIntoConstraints = false
-        titleLable.font = UIFont.systemFont(ofSize: 15)
+        titleLable.font = UIFont.systemFont(ofSize: ConstantSize.fontOfTitleLable)
         return titleLable
     }()
     
-    private(set) lazy var infoLabel: UILabel = {
-        let infoLabel = UILabel()
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        infoLabel.textColor = .systemBlue
-        return infoLabel
+    private(set) lazy var valueLabel: UILabel = {
+        let valueLabel = UILabel()
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueLabel.textColor = ConstantColor.textOfValueLabel
+        return valueLabel
     }()
 
+    // MARK: - Initialize
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setting()
@@ -37,6 +46,7 @@ class DetailsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
     private func setting() {
         addSubviews()
         setConstraints()
@@ -44,20 +54,20 @@ class DetailsTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         addSubview(titleLable)
-        addSubview(infoLabel)
+        addSubview(valueLabel)
     }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: titleLable.topAnchor),
             leadingAnchor.constraint(equalTo: titleLable.leadingAnchor,
-                                     constant: -ConstantSize.textLeadingOffset),
+                                     constant: -ConstantSize.offsetOfLeadingTitleLable),
             trailingAnchor.constraint(equalTo: titleLable.trailingAnchor,
-                                      constant: ConstantSize.textTralingOffset),
+                                      constant: ConstantSize.offsetOfTralingTitleLable),
             
-            infoLabel.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
-            infoLabel.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
-            infoLabel.trailingAnchor.constraint(equalTo: titleLable.trailingAnchor)
+            valueLabel.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
+            valueLabel.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
+            valueLabel.trailingAnchor.constraint(equalTo: titleLable.trailingAnchor)
             
         ])
     }

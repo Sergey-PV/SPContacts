@@ -7,13 +7,21 @@
 
 import UIKit
 
+// MARK: - Constants
 private extension ConstantSize {
-    static let heightName: CGFloat = 30
-    static let heightPhotoAndNameView = ConstantSize.heightName + ConstantSize.bigImage
+    static let heightOfName: CGFloat = 30
+    static let heightOfPhotoAndNameView = ConstantSize.heightOfName + ConstantSize.bigImage
+    static let numberOfLinesInNameLabel = 5
+    static let minimumScaleFactorOfNameLable: CGFloat = 10
+    static let fontOfNameLabel: CGFloat = 30
+    static let offsetOfTopNameLabel: CGFloat = 15
+    static let offsetOfBottomNameLabel: CGFloat = 15
 }
 
+// MARK: - PhotoAndNameView
 class PhotoAndNameView: UIView {
     
+    // MARK: - UIElements
     private(set) lazy var photoImageView: UIImageView = {
         let photoImageView = UIImageView()
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,18 +29,20 @@ class PhotoAndNameView: UIView {
         return photoImageView
     }()
     
-    private(set) lazy var nameLable: UILabel = {
+    private(set) lazy var nameLabel: UILabel = {
         let nameLable = UILabel()
-        nameLable.translatesAutoresizingMaskIntoConstraints = false
-        nameLable.textAlignment = .center
-        nameLable.minimumScaleFactor = 10
-        nameLable.font = UIFont.boldSystemFont(ofSize: 30)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.textAlignment = .center
+        nameLabel.minimumScaleFactor = ConstantSize.minimumScaleFactorOfNameLable
+        nameLabel.numberOfLines = ConstantSize.numberOfLinesInNameLabel
+        nameLabel.font = UIFont.boldSystemFont(ofSize: ConstantSize.fontOfNameLabel)
         return nameLable
     }()
 
+    // MARK: - Initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.frame.size.height = ConstantSize.heightPhotoAndNameView
+        self.frame.size.height = ConstantSize.heightOfPhotoAndNameView
         setting()
     }
     
@@ -40,6 +50,7 @@ class PhotoAndNameView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
     private func setting() {
         addSubviews()
         setConstraints()
@@ -47,7 +58,7 @@ class PhotoAndNameView: UIView {
     
     private func addSubviews() {
         addSubview(photoImageView)
-        addSubview(nameLable)
+        addSubview(nameLabel)
     }
     
     private func setConstraints() {
@@ -56,13 +67,14 @@ class PhotoAndNameView: UIView {
             photoImageView.heightAnchor.constraint(equalToConstant: ConstantSize.bigImage),
             photoImageView.widthAnchor.constraint(equalToConstant: ConstantSize.bigImage),
             
-            nameLable.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 15),
-            nameLable.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
-            nameLable.heightAnchor.constraint(equalToConstant: ConstantSize.heightName),
-            nameLable.leadingAnchor.constraint(equalTo: leadingAnchor),
-            nameLable.trailingAnchor.constraint(equalTo: trailingAnchor)
+            nameLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor,
+                                           constant: ConstantSize.offsetOfTopNameLabel),
+            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
+                                              constant: -ConstantSize.offsetOfBottomNameLabel),
+            nameLabel.heightAnchor.constraint(equalToConstant: ConstantSize.heightOfName),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
             
         ])
     }
-    
 }

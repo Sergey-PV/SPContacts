@@ -8,13 +8,16 @@
 import UIKit
 import Contacts
 
+// MARK: - ImportViewController
 class ImportViewController: UIViewController {
     
+    // MARK: - UIElements
     private lazy var importView: ImportView = {
         guard let view = view else { return ImportView() }
         return view as! ImportView
     }()
     
+    // MARK: - Lifecycle
     override func loadView() {
         view = ImportView()
     }
@@ -29,6 +32,7 @@ class ImportViewController: UIViewController {
                                          for: .touchUpInside)
     }
     
+    // MARK: - Private methods
     @objc private func importButtonTouchUpInside(button: UIButton) {
         let contactStore = CNContactStore()
         contactStore.fetchContact(on: Contact.self) {[weak self] result in

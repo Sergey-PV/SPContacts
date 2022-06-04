@@ -7,8 +7,10 @@
 
 import UIKit
 
+// MARK: - ImportButton
 class ImportButton: UIButton {
     
+    // MARK: - Initialize
     init() {
         super.init(frame: .zero)
         setting()
@@ -18,6 +20,7 @@ class ImportButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
     private func setting() {
         setTitle(ConstantString.downloadContactsLocalized, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false

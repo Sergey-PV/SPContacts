@@ -8,7 +8,9 @@
 import UIKit
 import Contacts
 
+// MARK: - Contact
 final class Contact {
+    
     // MARK: - Private Properties
     var identifier: String
     var name: String
