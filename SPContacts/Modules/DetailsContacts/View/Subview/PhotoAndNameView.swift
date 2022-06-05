@@ -30,13 +30,13 @@ class PhotoAndNameView: UIView {
     }()
     
     private(set) lazy var nameLabel: UILabel = {
-        let nameLable = UILabel()
+        let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textAlignment = .center
         nameLabel.minimumScaleFactor = ConstantSize.minimumScaleFactorOfNameLable
         nameLabel.numberOfLines = ConstantSize.numberOfLinesInNameLabel
         nameLabel.font = UIFont.boldSystemFont(ofSize: ConstantSize.fontOfNameLabel)
-        return nameLable
+        return nameLabel
     }()
 
     // MARK: - Initialize

@@ -20,6 +20,7 @@ class DetailsViewController: UIViewController {
         return view as! DetailsView
     }()
     
+    private lazy var photoAndNameView = PhotoAndNameView()
     
     // MARK: - Lifecycle
     override func loadView() {
@@ -31,9 +32,17 @@ class DetailsViewController: UIViewController {
         detailsView.detailsTableView.delegate = self
         detailsView.detailsTableView.dataSource = self
         navigationItem.largeTitleDisplayMode = .never
-    } 
-
+        setHeaderTableView()
+    }
+    
+    // MARK: - Private methods
+    private func setHeaderTableView() {
+        photoAndNameView.nameLabel.text = contact?.getFullname()
+        photoAndNameView.photoImageView.image = contact?.imageData
+        detailsView.detailsTableView.tableHeaderView = photoAndNameView
+    }
 }
+
 // MARK: - UITableViewDelegate
 extension DetailsViewController: UITableViewDelegate {
     

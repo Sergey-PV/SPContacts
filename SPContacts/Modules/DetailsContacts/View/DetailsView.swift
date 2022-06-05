@@ -25,7 +25,6 @@ class DetailsView: UIView {
         return detailsTableView
     }()
     
-    private(set) lazy var photoAndNameView = PhotoAndNameView()
     
     // MARK: - Initialize
     override init(frame: CGRect) {
@@ -51,9 +50,5 @@ class DetailsView: UIView {
             leadingAnchor.constraint(equalTo: detailsTableView.leadingAnchor),
             trailingAnchor.constraint(equalTo: detailsTableView.trailingAnchor)
         ])
-    }
-    
-    private func setHeaderTableView() {
-        detailsTableView.tableHeaderView = photoAndNameView
     }
 }
