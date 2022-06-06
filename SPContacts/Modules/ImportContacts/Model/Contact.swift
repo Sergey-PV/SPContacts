@@ -11,6 +11,9 @@ import Contacts
 // MARK: - Contact
 final class Contact {
     
+    // MARK: - Static Properties
+    static let importNotificationName = Notification.Name(ConstantString.importContactNotificationName)
+    
     // MARK: - Private Properties
     var identifier: String
     var name: String
@@ -34,7 +37,23 @@ final class Contact {
             imageData = UIImage(named:"PersonCircle")
         }
     }
-    static let importNotificationName = Notification.Name(ConstantString.importContactNotificationName)
+    
+    // MARK: - Public methods
+    func getFullname() -> String {
+        if name == "" {
+            return familyName
+        }
+        if familyName == "" {
+            return name
+        }
+        
+        let settingsBundleHelper = SettingsBundleHelper()
+        if settingsBundleHelper.sortOrder == .first {
+            return "\(name) \(familyName)"
+        } else {
+            return "\(familyName) \(name)"
+        }
+    }
 }
 
 // MARK: - FetchableContacts

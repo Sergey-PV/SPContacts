@@ -139,7 +139,7 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ConstantString.listCellId,
                                                  for: indexPath)
         guard let cell = cell as? ListTableViewCell else { return cell }
-        cell.nameLable.text = contacts[indexPath.row].name + " " + contacts[indexPath.row].familyName
+        cell.nameLable.text = contacts[indexPath.row].getFullname()
         cell.photoImageView.image = contacts[indexPath.row].imageData
         return cell
     }

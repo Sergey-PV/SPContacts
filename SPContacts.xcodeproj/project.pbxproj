@@ -79,13 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF05AD5F28171E6A001C9783 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		FF05AD6028171E7E001C9783 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,13 +111,6 @@
 				FF05AD672817206F001C9783 /* ListView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FF05AD6428171EF1001C9783 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FF05AD6928172893001C9783 /* Subview */ = {
@@ -184,7 +170,6 @@
 		FF5422AF2801B86300E93AF0 /* ListContacts */ = {
 			isa = PBXGroup;
 			children = (
-				FF05AD6428171EF1001C9783 /* Model */,
 				FF05AD6328171EE9001C9783 /* View */,
 				FF05AD6228171ED2001C9783 /* Controller */,
 			);
@@ -204,7 +189,6 @@
 		FF5422B62801B9EA00E93AF0 /* DetailsContacts */ = {
 			isa = PBXGroup;
 			children = (
-				FF05AD5F28171E6A001C9783 /* Model */,
 				FF05AD6028171E7E001C9783 /* View */,
 				FF05AD6128171EAD001C9783 /* Controller */,
 			);
