@@ -7,3 +7,8 @@
 */
 "Download contacts" = "Загрузить контакты";
 "Contacts" = "Контакты";
+"SPContacts cannot import your contacts" = "SP Contacts не может импортировать Ваши контакты";
+"Please give the app permission to import contacts. You can find this option in you device setting" = "Пожалуйста, дайте приложению разрешение на импорт контактов. Вы можете найти эту опцию в настройках вашего устройства";
+"Setting" = "Настройки";
+"Cancel" = "Отмена";
+

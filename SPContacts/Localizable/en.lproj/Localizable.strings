@@ -7,4 +7,7 @@
 */
 "Download contacts" = "Download contacts";
 "Contacts" = "Contacts";
-
+"SPContacts cannot import your contacts" = "SPContacts cannot import your contacts";
+"Please give the app permission to import contacts. You can find this option in you device setting" = "Please give the app permission to import contacts. You can find this option in you device setting";
+"Setting" = "Setting";
+"Cancel" = "Cancel";

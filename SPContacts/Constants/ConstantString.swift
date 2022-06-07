@@ -10,6 +10,9 @@ import Foundation
 struct ConstantString {
     static let downloadContactsLocalized = NSLocalizedString("Download contacts", comment: "")
     static let contactsLocalized = NSLocalizedString("Contacts", comment: "")
+    static let settingLocalized = NSLocalizedString("Setting", comment: "")
+    static let cancelLocalized = NSLocalizedString("Cancel", comment: "")
+    
     static let listCellId = "listCellId"
     static let detailsCellId = "detailsCellId"
     static let importContactNotificationName = "importContact"
