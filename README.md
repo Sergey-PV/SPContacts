@@ -16,5 +16,4 @@ I realized in my project import contacts and showing details about contact. I us
  - Localization
 
 ## Demo
-
-![](https://github.com/Sergey-PV/SPContacts/blob/master/Demo/Demo.mp4)
+<img alt="demo element" src="Demo/Demo.gif" width="380" />
