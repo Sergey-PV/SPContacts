@@ -7,23 +7,43 @@
 
 import UIKit
 
+// MARK: - Constants
+private extension ConstantString {
+    static let titleContactAccessAlertLocalized =
+    NSLocalizedString("SPContacts cannot import your contacts",
+                      comment: "")
+    static let messageContactAccessAlertLocalized =
+    NSLocalizedString("Please give the app permission to import contacts. You can find this option in you device setting",
+                      comment: "")
+}
+
+// MARK: - ErrorAccessContactsAlertController
 class ErrorAccessContactsAlertController: UIAlertController {
+
+    // MARK: - Private properties
+    private lazy var cancelAlertAction = UIAlertAction(title: ConstantString.cancelLocalized,
+                                                       style: .cancel)
+    
+    private lazy var settingAlertAction = UIAlertAction(title: ConstantString.settingLocalized,
+                                                        style: .default) { _ in
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    
+    convenience init(){
+        self.init(nibName: nil, bundle: nil)
+        title = ConstantString.titleContactAccessAlertLocalized
+        message = ConstantString.messageContactAccessAlertLocalized
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addAction(settingAlertAction)
+        addAction(cancelAlertAction)
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -12,6 +12,7 @@
 		FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6A281728FC001C9783 /* ListTableViewCell.swift */; };
 		FF05AD6D28172CAD001C9783 /* ConstantSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6C28172CAD001C9783 /* ConstantSize.swift */; };
 		FF05AD6F2818708C001C9783 /* ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD6E2818708C001C9783 /* ConstantColor.swift */; };
+		FF4CB7942858B62400C49B25 /* ErrorAccessContactsAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4CB7932858B62400C49B25 /* ErrorAccessContactsAlertController.swift */; };
 		FF54229B2801B5A600E93AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229A2801B5A600E93AF0 /* AppDelegate.swift */; };
 		FF54229D2801B5A600E93AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */; };
 		FF5422A42801B5A800E93AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5422A32801B5A800E93AF0 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		FF05AD6A281728FC001C9783 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		FF05AD6C28172CAD001C9783 /* ConstantSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantSize.swift; sourceTree = "<group>"; };
 		FF05AD6E2818708C001C9783 /* ConstantColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantColor.swift; sourceTree = "<group>"; };
+		FF4CB7932858B62400C49B25 /* ErrorAccessContactsAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAccessContactsAlertController.swift; sourceTree = "<group>"; };
 		FF5422972801B5A600E93AF0 /* SPContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54229A2801B5A600E93AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = Subview;
 			sourceTree = "<group>";
 		};
+		FF4CB7922858B54800C49B25 /* ErrorAccessContacts */ = {
+			isa = PBXGroup;
+			children = (
+				FF4CB7932858B62400C49B25 /* ErrorAccessContactsAlertController.swift */,
+			);
+			path = ErrorAccessContacts;
+			sourceTree = "<group>";
+		};
 		FF54228E2801B5A500E93AF0 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 				FF5422BD2804985900E93AF0 /* Extensions */,
 				FF5422BA280495A700E93AF0 /* Protocols */,
 				FF93AB57283ACD8F0026ED17 /* Services */,
+				FF5422C02804B18B00E93AF0 /* Model */,
 				FF5422AE2801B84200E93AF0 /* Modules */,
 				FF54229A2801B5A600E93AF0 /* AppDelegate.swift */,
 				FF54229C2801B5A600E93AF0 /* SceneDelegate.swift */,
@@ -160,6 +171,7 @@
 		FF5422AE2801B84200E93AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF4CB7922858B54800C49B25 /* ErrorAccessContacts */,
 				FF5422B62801B9EA00E93AF0 /* DetailsContacts */,
 				FF5422B52801B9BD00E93AF0 /* ImportContacts */,
 				FF5422AF2801B86300E93AF0 /* ListContacts */,
@@ -179,7 +191,6 @@
 		FF5422B52801B9BD00E93AF0 /* ImportContacts */ = {
 			isa = PBXGroup;
 			children = (
-				FF5422C02804B18B00E93AF0 /* Model */,
 				FF5422C3280734C800E93AF0 /* View */,
 				FF5422C2280734A300E93AF0 /* Controller */,
 			);
@@ -373,6 +384,7 @@
 				FF05AD6D28172CAD001C9783 /* ConstantSize.swift in Sources */,
 				FF5422C52807359800E93AF0 /* ImportViewController.swift in Sources */,
 				FF05AD6B281728FC001C9783 /* ListTableViewCell.swift in Sources */,
+				FF4CB7942858B62400C49B25 /* ErrorAccessContactsAlertController.swift in Sources */,
 				FF6BD35B28396FA7007F846C /* CloseButton.swift in Sources */,
 				FF05AD682817206F001C9783 /* ListView.swift in Sources */,
 				FF55E0512843E8E500759CAA /* DetailsTableViewCell.swift in Sources */,

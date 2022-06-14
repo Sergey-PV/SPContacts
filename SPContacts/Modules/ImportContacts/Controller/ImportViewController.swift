@@ -8,15 +8,7 @@
 import UIKit
 import Contacts
 
-// MARK: - Constants
-private extension ConstantString {
-    static let titleContactAccessAlertLocalized =
-    NSLocalizedString("SPContacts cannot import your contacts",
-                      comment: "")
-    static let messegeContactAccessAlertLocalized =
-    NSLocalizedString("Please give the app permission to import contacts. You can find this option in you device setting",
-                      comment: "")
-}
+
 
 // MARK: - ImportViewController
 class ImportViewController: UIViewController {
@@ -27,26 +19,7 @@ class ImportViewController: UIViewController {
         return view as! ImportView
     }()
     
-    private lazy var contactAccessAlertController: UIAlertController = {
-        let contactAccessAlertController = UIAlertController(title: ConstantString.titleContactAccessAlertLocalized,
-                                                             message: ConstantString.messegeContactAccessAlertLocalized,
-                                                             preferredStyle: .alert)
-        contactAccessAlertController.addAction(settingAlertAction)
-        contactAccessAlertController.addAction(cancelAlertAction)
-        return contactAccessAlertController
-    }()
-    
-    private lazy var cancelAlertAction = UIAlertAction(title: ConstantString.cancelLocalized,
-                                                       style: .cancel)
-    
-    private lazy var settingAlertAction = UIAlertAction(title: ConstantString.settingLocalized,
-                                                        style: .default) { _ in
-        if let url = URL(string: UIApplication.openSettingsURLString) {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
-    }
+    private lazy var contactAccessAlertController = ErrorAccessContactsAlertController()
     
     // MARK: - Lifecycle
     override func loadView() {
