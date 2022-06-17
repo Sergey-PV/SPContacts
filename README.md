@@ -1,6 +1,6 @@
 # Welcome!
 
-I realized in my project import contacts and showing details about contact. I used the **MVC** architecture pattern.
+I realized in my project import contacts and showing details about contact. I used the **MVC** architecture pattern. I didn't use xib\Storyboard in the project.
 
 ### Used frameworks
 
